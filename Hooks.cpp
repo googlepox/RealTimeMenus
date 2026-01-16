@@ -37,22 +37,6 @@ namespace RealTimeMenus
 		return nullptr;
 	}
 
-	bool __cdecl IsMenuMode_AIUpdate_Hook()
-	{
-		Actor* currentActor = *(Actor**)0xB3BCF8;
-		Actor* dialogueSpeaker = GetCurrentDialogueSpeaker();
-
-		_MESSAGE("IsMenuMode check - Current: %08X, Speaker: %08X", currentActor, dialogueSpeaker);
-
-		if (dialogueSpeaker && currentActor == dialogueSpeaker)
-		{
-			_MESSAGE("Returning TRUE for dialogue speaker");
-			return true;
-		}
-
-		return false;
-	}
-
 	bool __cdecl IsDialogueSpeakerAI()
 	{
 		Actor* currentActor = *(Actor**)0xB3BCF8;  // dword_B3BCF8

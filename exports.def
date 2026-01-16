@@ -1,0 +1,4 @@
+LIBRARY	"TrueSpears"
+EXPORTS
+OBSEPlugin_Query
+OBSEPlugin_Load
